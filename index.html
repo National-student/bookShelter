@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Library</title>
+</head>
+<body>
+    <!-- Header section -->
+    <div class="pt-3">
+        <div class="container">
+            <div class="row d-flex align-items-center">
+                <div class="col-3">
+                    <img src="images/title.png" alt="header-title" width="226" height="44">
+                </div>
+                
+                <div class="col-6">
+                    <form id="form">
+                        <input class="form-control border rounded-pill" type="search" list="datalistOptions" id="form-input" placeholder="Search books" autocomplete="off" required>
+                    </form>
+                </div>
+                
+                <div class="col-3 text-end">
+                    <button class="p-0 border-0 bg-white dark-mood">
+                        <img class="d-block" src="images/sun.png" alt="sunny" width="23" height="23">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------------------------->
+    
+    <!--Hero section-->
+    <div class="mt-3 border-top border-bottom">
+        <div class="container">
+            <div class="row pt-2 pb-2">
+                <div class="col-7 text-center">
+                    Showing <span class="count-books">0</span> Result(s)
+                </div>
+                
+                <div class="col-3">
+                    <!-- Bu joy Result bilan Newest buttonni orasidagi bo'sh joy -->
+                </div>
+                
+                <div class="col-2 text-end">
+                    <button type="button" id="newest-button" class="btn btn-secondary btn-sm d-flex align-items-center"><img class="me-2" src="images/calendar.png" alt="cal" width="24" height="24">Order by newest</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main section -->
+    <div class="container">
+        <div class="row">
+            
+            <!-- Bookmark section (read and delete) -->
+            <div class="col-3 p-3 pe-4">
+                <h3 class="h3">Bookmarks</h3>
+                
+                <p class="fs-6">
+                    If you don't like to read, you haven't found the right book
+                </p>
+                
+                <ul class="border-0 rounded list-unstyled" id="bookmark-list">
+                    
+                </ul>
+                
+            </div>
+            
+            <!-- Render Books -->
+            
+            <div class="col-9 p-0 bg-light">
+                <div class="d-flex justify-content-center flex-wrap" id="books-list">
+                    <div class="d-flex justify-content-center vh-100 align-items-center mt-4 mb-4">
+                        <div class="spinner-border" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+                    <ul class="pagination">
+                        <li class="page-item">
+                            <a class="page-link bg-secondary text-white" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">...</a></li>
+                        <li class="page-item"><a class="page-link" href="#">16</a></li>
+                        <li class="page-item"><a class="page-link" href="#">17</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal -->
+    <div class="offcanvas offcanvas-end book-modal" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 id="offcanvasRightLabel" class="book-modal-title">Python</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="text-center mt-2">
+            <img class="book-modal-img" src="images/book.png" alt="book" width="120" height="150">
+        </div>
+        
+        <div class="offcanvas-body book-modal-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, at quia voluptatem corrupti temporibus sed? Asperiores cupiditate nostrum et perspiciatis tenetur aut nisi tempora, qui hic accusantium id. Voluptates adipisci doloremque cum facere? Est nihil tempora odit modi iusto asperiores mollitia blanditiis accusantium facere laborum voluptatibus ratione minus dicta commodi eveniet nemo repudiandae, officia fugiat velit autem sunt, ex quod nam? Facere eaque incidunt similique, debitis dolorem, tempora ratione unde suscipit, ex odio cupiditate explicabo praesentium? Soluta eveniet qui similique. Tempora inventore voluptatem quos tempore dolor, voluptatum, quo repellat architecto eveniet, ad magni iusto vitae debitis nisi unde rem. Aspernatur?
+        </div>
+        
+        <div class="book-modal-information ms-3 pt-3">
+            <p>Author: <span class="border border-primary rounded-pill pt-1 pb-1 pe-3 ps-3 text-info book-author">Sanjar</span></p>
+        </div>
+        
+        <div class="book-modal-information ms-3">
+            <p>Published: <span class="border border-primary rounded-pill pt-1 pb-1 pe-3 ps-3 text-info book-published">2001</span></p>
+        </div>
+        
+        <div class="book-modal-information ms-3">
+            <p>Publishers: <span class="border border-primary rounded-pill pt-1 pb-1 pe-3 ps-3 text-info book-publishers">Najot talim</span></p>
+        </div>
+        
+        <div class="book-modal-information ms-3">
+            <p>Categories: <span class="border border-primary rounded-pill pt-1 pb-1 pe-3 ps-3 text-info book-category">Computer</span></p>
+        </div>
+        
+        <div class="book-modal-information ms-3">
+            <p>Pages Count: <span class="border border-primary rounded-pill pt-1 pb-1 pe-3 ps-3 text-info book-page">777</span></p>
+        </div>
+        
+        <div class="text-end pe-4 pb-2">
+            <a type="button" class="btn btn-secondary pe-3 ps-3 reading-book" target="_blanc">Read</a>
+        </div>
+    </div>
+    
+    <!-- Template boooks -->
+    <template id="template-books">
+        <div class="card m-4 border-0 card-width">
+            <div class="p-3 pb-0">
+                <img class="p-3 bookmark bg-light" id="book-img" src="images/book.png" alt="book" width="201" height="202">
+            </div>
+            
+            <div class="p-3 pb-1">
+                <h5 class="book-title">Phyton</h5>
+                <p class="fw-lighter m-0" id="autor-book">David M.Beazley</p>
+                <p class="fw-lighter m-0" id="year-book">2009</p>
+            </div>
+            
+            <div class="p-3 pt-0">
+                <button type="button" class="btn btn-warning" id="bookmark-btn">Bookmark</button>
+                <button class="btn btn-outline-primary" id="modal-open-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">More info</button> <br>
+            </div>
+            
+            <div class="p-3 pt-0 d-grid gap-1">
+                <a type="button" target="_blanc" class="btn btn-secondary" id="read-book">Read</a>
+            </div>
+        </div>
+    </template>
+    
+    <!-- Template bookmarks -->
+    <template id="template-bookmark">
+        <li class="d-flex bg-light p-2 align-items-center mb-2">
+            <div>
+                <h6 class="mb-0 bookmark-title">Python</h6>
+                <p class="mb-0 fw-lighter bookmark-autor">David M.Beazley</p>
+            </div>
+            <div class="ms-5 d-flex">
+                <a type="button" target="_blanc" class="btn p-0 read-button me-2"><img src="images/book-open.png" alt="book" width="24" height="24"></a>
+                <button type="button" class="btn p-0"><img class="del-button" src="images/delete.png" alt="del" width="24" height="24"></button>
+            </div>
+        </li>
+    </template>
+    
+    <script src="js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
